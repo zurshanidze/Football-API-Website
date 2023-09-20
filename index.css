@@ -1,0 +1,888 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+/* font-family: 'Kdam Thmor Pro', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* font-family: 'Lato', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* position: relative; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    min-width: fit-content;
+    height: 100vh;
+    background-color: rgba(42, 52, 194, 0.95);
+    background-image: url("./backg-img/mesut-ozil-2014-wallpaper-hd-exclusive-mesut-ozil-2014-hd-wallpapers-24721-tuiing-image.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+}
+
+header{
+    width:100%;
+    min-height:fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+header nav{
+    padding: 10px;
+    width: 96%;
+    /* min-width: fit-content; */
+    height: auto;
+    background:rgb(132, 207, 132, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;        
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;;
+    min-width:fit-content;
+    min-height: 44px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(60, 58, 185);
+    padding: 0px 15px;
+}
+
+header nav ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: fit-content;
+    border: 2px solid rgb(63, 231, 209);
+    -webkit-overflow-x: hidden;
+    -webkit-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.country-flag{
+    position: absolute;
+    border: 2px solid rgb(190, 224, 190);
+    width: 30%;
+    max-width: 165px;
+    height:100%;
+    min-height: initial;
+    border-radius: 0 150% 0 0%;
+    left: -5%;
+    background-position: -20px;
+    background-size: 140% 250%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.a-wrapper{
+    z-index: 1;
+}
+
+header nav ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size:20px;
+    /* margin-left: 15%; */
+    padding: 10px 10px;
+    height: 44px;
+    width: 100%;
+    min-width: fit-content;
+    border: 1px solid rgb(190, 224, 190);
+    white-space: nowrap;
+    z-index: 4;
+}
+
+header nav ul li a:hover {
+    cursor: pointer;
+    /* background-color: rgba(38, 36, 158, 0.7); */
+    background-color: rgb(61, 192, 94);
+}
+
+.European-tournaments{
+    margin-top: 20px;
+    padding: 5px 20px;
+    background: white;
+}
+
+.europeanTournamentLogo{
+    width: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.World {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    padding:5px 0;
+    padding-right: 5px;
+    background: white;
+    /* border: none; */
+    /* border: 1px solid rgb(177, 172, 171); */
+    border: none;
+    /* color: rgb(32, 31, 31); */
+    /* color: #551A8b; */
+}
+
+.World a {
+    color: #551A8b;
+    z-index: 2;
+    border: 1px solid rgb(177, 172, 171);
+    /* border: none; */
+}
+
+.World a:hover{
+    color: white;
+}
+
+.europeanTournamentLogo {
+    width: 70px;
+    height: 50px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid salmon;
+}
+
+main{
+    width: 100%;
+    min-width: fit-content;
+    height: 400px;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+section{
+    width: 100%;
+    margin: 0px;
+    /* min-height: 80vh; */
+    height: fit-content;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.dateTime-container{
+    display: flex;
+    flex-direction: column;
+    /* height: ; */
+    min-height: fit-content;
+    padding-bottom: 15px;
+}
+
+.dateTime-wrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 170px;
+    width: fit-content;
+    min-height: fit-content;
+    height: 50px;
+    width: auto;
+    margin: 20px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.dateTimeBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(0, 255, 64);
+    font-weight: bold;
+}
+
+.dateTimeBtn:active{
+    background-color: aquamarine;
+}
+
+.dateTime {
+    padding: 5px;
+}
+
+.chooseDate{
+    display: none;
+}
+
+.chooseDate.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height:45px;
+    width:100%;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    background: aquamarine;
+    overflow: visible;
+}
+
+.chooseDate.active:focus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    /* outline-color: rgb(18, 97, 143); */
+    color:rgb(28, 155, 17);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.chooseDate.active::before{
+    content: "";
+    position: absolute; 
+    width:45px;
+    height: 35px;
+    top:-10px;
+    background: inherit;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+
+.match-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-width: fit-content; */
+    width: 98%;
+    height: fit-content;
+    background-color: rgba(127, 255, 212, 0.8);
+    border-radius: 10px;
+    margin-bottom:30px;
+}
+
+.no-matches{
+    order:2;
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0px 0px 0px;
+    margin-top: 110px;
+    padding: 10px 5px;
+    font-size: 22px;
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.9);
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Kdam Thmor Pro', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Lato', sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.LeagueName {
+    position: relative;
+    display: flex;
+    min-width:fit-content;
+    width: 100%;    
+    min-height: 70px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:40px auto;
+    margin-bottom: 80px;
+    font-size: 17px;
+    /* font-size: 14px; */
+    /* border: 1px solid seagreen; */
+    /* background: rgb(17, 71, 133);
+    color: rgb(0, 0, 0);*/
+}
+
+.league-logo{
+    position: absolute;
+    top:60px;
+    left: auto;
+    width: 150px;
+    /* background-color: aqua; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 50px;
+    height:70px;
+}
+
+.LeagueNameH3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(58, 110, 170);
+    color: white;
+    min-width: fit-content;
+    max-width: 87%;
+    padding: 5px 20px;
+    border-radius: 5px;
+    animation: appearLeague 0.3s forwards;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@keyframes appearLeague {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.match-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* min-width:fit-content; */
+    width: 98%;
+    /* height: fit-content; */
+    min-height: 50px;
+    max-height: auto;
+    background-color: rgb(107, 107, 184);
+    margin:20px 0px;
+    animation: appearLeague 0.3s forwards;
+    opacity: 1;
+    font-size: 12px;
+}
+
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-break: break-word;
+    width:50%;
+    min-height: 100%;
+    height: auto;
+    background-color: rgba(107, 107, 184, 1);
+    opacity: 1;
+    z-index: 2;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+.team-1st{
+    border: 2p solid salmon;
+    border-radius: 10px;
+    padding-right: 2px;
+}
+
+.team-2nd {
+    border: 2p solid salmon;
+    border-radius: 10px;
+    padding-left: 2px;
+}
+
+.teamLogo {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 32px;
+    min-height: 35px;
+    width: auto;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:5px;
+    padding: 0px 5px;
+}
+
+.time-score{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 60px;
+    width: 10%;
+    height: auto;
+    background-color: rgb(184, 199, 199);
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.active-game{
+    animation: activeGame 1000ms infinite;
+}
+
+.active-league{
+    color:white!important;
+    animation: activeLeague 1000ms infinite;
+}
+
+.match-time{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+    /* border:1px solid seagreen; */
+    top: -45%;
+    font-size: 11px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    /* background: gray; */
+    /* background: rgb(172, 169, 169); */
+    /* background: rgb(216, 217, 218); */
+    background: rgb(226, 227, 233);
+    border-radius: 10px 10px 0 0;
+}
+
+.match-minutes{
+    position: relative;
+    /* color:rgb(226, 93, 44); */
+    color: rgb(207, 121, 7);
+    /* color: rgb(14, 165, 22); */
+    font-size:12.5px;
+    font-weight: bold;
+}
+
+.match-minutes::after {
+    position: absolute;
+    content: "'";
+    font-size: 15px;
+    left: 14px;
+    animation: activeMinutes 1000ms infinite;
+}
+
+.match-HT{
+    color: rgb(14, 165, 22);
+    /* color: rgb(207, 121, 7); */
+    /* color: rgb(14, 54, 165); */
+    /* color: rgb(42, 86, 206); */
+}
+
+.match-score{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: 1px solid saddlebrown;
+}
+
+.penalty{
+    position: relative;
+    padding-top:14px;
+    font-size: 11px;
+}
+
+.penalty::before{
+    position: absolute;
+    content: "PEN";
+    top: 4px;
+    font-size: 10px;
+}
+
+.too-many-requests {
+    display: none;
+    z-index: 5;
+}
+
+.too-many-requests.exaggerated{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:15%;
+    margin: 0;
+    min-width: 280px;
+    width:310px;
+    min-height: 150px;
+    height:fit-content;
+    background: transparent;
+    color: rgb(27, 27, 27);
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    z-index: 4;
+}
+
+.too-many-requests::before{
+    content: "";
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(47, 47, 71, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    z-index: 1;
+}
+
+.too-many-requests h2{
+    padding: 10px 20px;
+    margin:20px 15px;
+    text-align: center;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.7);
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+}
+
+.too-many-requests h2 p {
+    padding: 20px;
+    text-align: center;
+    background: none;
+    color: rgb(78, 78, 145);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+    line-height: 10px;
+}
+
+.too-many-requests .p2{
+    padding: 0 20px;
+    text-align: center;
+    z-index: 1;
+    text-transform: capitalize;
+    color: rgb(39, 39, 75);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2px 50px;
+    margin: 10px 10px;
+    border-radius: 4px;
+}
+
+@media screen and (max-height:320px){
+    .LeagueNameH3 {
+        font-size: 18px;
+    }
+
+    .too-many-requests.exaggerated {
+        top: 7%;
+        font-size: 14px;
+    }
+
+    .team{
+        display: flex;
+        flex-wrap: wrap;
+        font-size:11px;
+    }
+}
+
+
+@media screen and (min-width:970px) {
+    body{
+        background-image: url("./backg-img/football-img-14-Wembley.jpg");
+    }
+
+    header {
+        width: 100%;
+        min-height: fit-content;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    header nav {
+        border-radius: 10px;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* background-color: blueviolet; */
+        background-color: rgb(60, 58, 185);
+        border-radius: 4px;
+        padding: 0px 20px;
+    }
+
+    header nav ul li {
+        list-style: none;
+        width: 25%;
+        height: 150%;
+    }
+
+    .country-flag {
+        position: absolute;
+        border: 2px solid rgb(190, 224, 190);
+        width: 90px;
+        /* min-width: 122px; */
+        height: 100%;
+        min-height: initial;
+        border-radius: 0 150% 0 0%;
+        left: -30px;
+        top:0;
+        background-position: left;
+        background-size: 114px 110px;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+
+    header nav ul li a {
+        /* border: 2px solid salmon; */
+        width: 100%;
+        padding: 10px auto;
+    }
+
+    .country{
+        background-position: left;
+        background-size: auto 73%;
+        background-repeat: no-repeat;
+        z-index: 3;
+    }
+
+    .World{
+        width: 28%;
+        min-width: fit-content;
+        border: 1px solid rgb(177, 172, 171);
+    }
+
+    .World a{
+        border: none;
+        /* margin-right: 4px; */
+    }
+
+    .europeanTournamentLogo{
+        border: none;
+    }
+
+    section {
+        width: fit-content;
+        margin: 10px auto;
+        /* min-height: 80vh; */
+        height: fit-content;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .match-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 520px;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgba(127, 255, 212, 0.8);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .match-wrapper {
+        display: flex;
+        flex-direction: row;
+        min-width: 400px;
+        width: fit-content;
+        height: 50px;
+        background-color: rgb(107, 107, 184);
+        margin: 20px 0;
+        animation: appearLeague 0.3s forwards;
+        opacity: 1;
+        font-size: 17px;
+    }
+
+    .team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-width: 145px;
+        width: 170px;
+        height: 100%;
+        background-color: rgba(107, 107, 184, 1);
+        opacity: 1;
+        z-index: 2;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+    }
+
+    .team-1st {
+        border: 2p solid salmon;
+        border-radius: 10px;
+        padding-right: 5px;
+    }
+
+    .team-2nd {
+        border: 2p solid salmon;
+        border-radius: 10px;
+        padding-left: 5px;
+    }
+
+    .teamLogo {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 50px;
+        min-height: 40px;
+        width: auto;
+        height: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0px 20px;
+    }
+
+    .time-score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 125px;
+        width: 135px;
+        height: 100%;
+        background-color: rgb(184, 199, 199);
+        margin: 0;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .penalty{
+        padding-top: 7px;
+        font-size: 12.5px;
+    }
+
+    .penalty::before {
+        position: absolute;
+        content: "PEN";
+        padding-top: 7px;
+        top:1px;
+        left: -30px;
+        font-size: 11px;
+    }
+
+    .too-many-requests h2 {
+        padding: 10px 20px;
+        margin: 20px 15px;
+        text-align: center;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .too-many-requests.exaggerated {
+        min-width: 350px;
+        width: 450px;
+        font-size: 20px;
+    }
+}
+
+
+@keyframes activeLeague {
+    0% {
+        background: rgb(22, 134, 22);
+    }
+
+    50% {
+        /* background: rgba(22, 134, 22, 0.5); */
+        background: rgba(22, 134, 22, 0.7);
+    }
+
+    100% {
+        background: rgba(22, 134, 22, 1);
+    }
+}
+
+
+@keyframes activeGame {
+    0%{
+        background: rgba(47, 255, 47, 1);
+    }
+    50%{
+        background: rgba(47, 255, 47, 0.5);
+    }
+    100%{
+        background: rgba(47, 255, 47, 1);
+    }
+}
+
+
+@keyframes activeMinutes {
+    0% {
+        opacity:1;
+        /* color: rgba(207, 121, 7, 1); */
+    }
+
+    50% {
+        opacity: 0.3;
+        /* color: rgba(207, 121, 7, 0.3); */
+    }
+
+    100% {
+        opacity: 1;
+        /* color: rgba(207, 121, 7, 1); */
+    }
+}
+
+/* @keyframes activeGame {
+    0%{
+        background: greenyellow;
+        opacity: 0;
+    }
+    100%{
+        background: greenyellow;
+        opacity: 1;
+    }
+} */
