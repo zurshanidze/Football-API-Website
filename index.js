@@ -91,8 +91,8 @@ previousDay = new Date(previousDayInMS);
 
 getSeparately_MonthDayYear(previousDay); // returns "year", "month", "day" - to assign to "previousDay"
 previousDay = year + "-" + month + "-" + day;
-console.log(previousDay, "previousDay", previousDayInMS, "previousDayInMS");
-console.log(currentDateTime, "currentDateTime", curntDateInMs, "curntDateInMs");
+// console.log(previousDay, "previousDay", previousDayInMS, "previousDayInMS");
+// console.log(currentDateTime, "currentDateTime", curntDateInMs, "curntDateInMs");
 
 // get "Date" div
 let dateTime = document.getElementById("dateTime");
@@ -134,13 +134,13 @@ function minus1DayFunc() {
   curntDateInMs = curntDateInMs - 1000 * 60 * 60 * 24;
   previousDayInMS = previousDayInMS - 1000 * 60 * 60 * 24;
 
-  console.log(previousDay, "previousDay", previousDayInMS, "previousDayInMS");
-  console.log(
-    currentDateTime,
-    "currentDateTime",
-    curntDateInMs,
-    "curntDateInMs"
-  );
+  // console.log(previousDay, "previousDay", previousDayInMS, "previousDayInMS");
+  // console.log(
+  //   currentDateTime,
+  //   "currentDateTime",
+  //   curntDateInMs,
+  //   "curntDateInMs"
+  // );
 
   currentDateTime = new Date(curntDateInMs);
   previousDay = new Date(previousDayInMS);
@@ -152,11 +152,11 @@ function minus1DayFunc() {
 
   dateTime.innerText = month + "-" + day + "-" + year;
   chooseDate.value = DateTimeFormatForInput;
-  console.log(currentDateTime, "currentDateTime -");
+  // console.log(currentDateTime, "currentDateTime -");
 
   getSeparately_MonthDayYear(previousDay); // returns "year", "month", "day" - to assign to "previousDay"
   previousDay = year + "-" + month + "-" + day;
-  console.log(previousDay, "previousDay -");
+  // console.log(previousDay, "previousDay -");
 
   [...matchList.childNodes].map((myMatch) => {
     matchList.removeChild(myMatch);
@@ -185,11 +185,11 @@ function plus1DayFunc() {
 
   dateTime.innerText = month + "-" + day + "-" + year;
   chooseDate.value = DateTimeFormatForInput;
-  console.log(currentDateTime, "currentDateTime +");
+  // console.log(currentDateTime, "currentDateTime +");
 
   getSeparately_MonthDayYear(previousDay); // result of this Function assign to "previousDay"
   previousDay = year + "-" + month + "-" + day;
-  console.log(previousDay, "previousDay +");
+  // console.log(previousDay, "previousDay +");
 
   [...matchList.childNodes].map((myMatch) => {
     matchList.removeChild(myMatch);
@@ -237,7 +237,7 @@ function ApiResponse_ForActiveLeague() {
     .request(sendRequestObj_ForLeaguesObj(currentDateTime))
     .then(function (response) {
       const allChampionshipsObjectToday = response.data.response;
-      console.log(allChampionshipsObjectToday);
+      // console.log(allChampionshipsObjectToday);
 
       allChampionshipsObject_TodayAndYesterday =
         allChampionshipsObjectToday.concat(allChampionshipsObjectToday);
@@ -256,10 +256,10 @@ function ApiResponse_ForActiveLeague() {
           (eachChampionshipTodayAndYesterday) => {
             if (eachChampionshipTodayAndYesterday.league.id == navLeague.id) {
               if (navLeague.classList.contains("active-league")) {
-                console.log("test2");
+                // console.log("test2");
                 return navLeague;
               } else {
-                console.log("test3");
+                // console.log("test3");
                 return navLeague.classList.add("active-league");
               }
             }
@@ -314,94 +314,98 @@ window.addEventListener("load", () => {
   // On window Load - "Date" div assign to the "Today DateTime"
   dateTime.innerText = TodayDateTime;
 
-  console.log(previousDay, "previousDay");
-  console.log(currentDateTime, "currentDateTime");
+  // console.log(previousDay, "previousDay");
+  // console.log(currentDateTime, "currentDateTime");
   // console.log(currentDateTime, "currentDateTime Static");
 
   // On window Load Function to Add - "active-league" Class to active Leagues in current Date
-  // ApiResponse_ForActiveLeague()
+  ApiResponse_ForActiveLeague();
 
   // on Load window Return Flags to each League
-  // const options = {
-  //   method: 'GET',
-  //   url: 'https://api-football-beta.p.rapidapi.com/leagues',
-  //   params: {id: `${parseInt(navLeague.id)}`},
-  //   headers: {
-  //     'X-RapidAPI-Key': 'a6de39b80emsh2c79d430e72f9d6p1148c9jsna256d95e8fca',
-  //     'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com'
-  //   }
-  // };
+  const options = {
+    method: "GET",
+    url: "https://api-football-beta.p.rapidapi.com/leagues",
+    params: { id: `${parseInt(navLeague.id)}` },
+    headers: {
+      "X-RapidAPI-Key": "a6de39b80emsh2c79d430e72f9d6p1148c9jsna256d95e8fca",
+      "X-RapidAPI-Host": "api-football-beta.p.rapidapi.com",
+    },
+  };
 
-  // axios.request(options).then(function (response) {
-  //   // console.log(response.data, "- response.data", navLeague.id, "-this.navLeague.id");
+  axios
+    .request(options)
+    .then(function (response) {
+      // console.log(response.data, "- response.data", navLeague.id, "-this.navLeague.id");
 
-  //   let countryAndLeagueObj = response.data
-  //   let countryObj = countryAndLeagueObj.response[0].country.name
-  //   let countryFlag = countryAndLeagueObj.response[0].country.flag
+      let countryAndLeagueObj = response.data;
+      let countryObj = countryAndLeagueObj.response[0].country.name;
+      let countryFlag = countryAndLeagueObj.response[0].country.flag;
 
-  //   liCountriesArray.map((country) => {
-  //       if(country.attributes.name.nodeValue == countryObj){
-  //             // console.log("hello1")
-  //             country.classList.add("country")
-  //             let countryFlagForCountry = document.createElement("div")
-  //             countryFlagForCountry.style.backgroundImage = `url("${countryFlag}")`
-  //             countryFlagForCountry.classList.add("country-flag")
-  //             // console.log(country.firstElementChild, "country.firstChild")
-  //             country.prepend(countryFlagForCountry)
-  //       }
-  //     })
-  // }).catch(function (error) {
-  //   console.error(error);
+      liCountriesArray.map((country) => {
+        if (country.attributes.name.nodeValue == countryObj) {
+          // console.log("hello1")
+          country.classList.add("country");
+          let countryFlagForCountry = document.createElement("div");
+          countryFlagForCountry.style.backgroundImage = `url("${countryFlag}")`;
+          countryFlagForCountry.classList.add("country-flag");
+          // console.log(country.firstElementChild, "country.firstChild")
+          country.prepend(countryFlagForCountry);
+        }
+      });
+    })
+    .catch(function (error) {
+      console.error(error);
 
-  //   if(error.response.status == 429){
-  //     let tooManyRequests = document.getElementById("too-many-requests");
-  //     tooManyRequests.classList.add("exaggerated")
-  //   }
-  // });
+      if (error.response.status == 429) {
+        let tooManyRequests = document.getElementById("too-many-requests");
+        tooManyRequests.classList.add("exaggerated");
+      }
+    });
 });
 
-//       // On Load Window Return Logo for Eurpean Tournaments
+// On Load Window Return Logo for Eurpean Tournaments
 
-// // get Uefa Tournaments elements from Nodelist
-// // Map Through over the Uefa "a" Elements,
-// // create sibling "div" elements for Logo
-// // and added to it's parent "li" elements
-// UefaTournaments.map((UefaTournament)=>{
+// get Uefa Tournaments elements from Nodelist
+// Map Through over the Uefa "a" Elements,
+// create sibling "div" elements for Logo
+// and added to it's parent "li" elements
+UefaTournaments.map((UefaTournament) => {
+  // On Load Window Send request object
+  // fetch response object for logo
+  // and Return Logo for Eurpean Tournaments
+  axios
+    .request(sendRequestObj_ForLeaguesFlagsAndLogos(UefaTournament))
+    .then(function (response) {
+      // Get Response Data
+      let countryAndLeagueObj = response.data;
+      let leagueObj = countryAndLeagueObj.response[0].league.name;
+      let leagueLogo = countryAndLeagueObj.response[0].league.logo;
 
-//     // On Load Window Send request object
-//     // fetch response object for logo
-//     // and Return Logo for Eurpean Tournaments
-//     axios.request(sendRequestObj_ForLeaguesFlagsAndLogos(UefaTournament)).then(function (response) {
-//         // Get Response Data
-//         let countryAndLeagueObj = response.data
-//         let leagueObj = countryAndLeagueObj.response[0].league.name
-//         let leagueLogo = countryAndLeagueObj.response[0].league.logo
+      // get List of Uefa "li" Elements from Nodelist
+      let liEuropeanTournaments = document.querySelectorAll(".World");
+      let liEuropeanTournamentsArray = [...liEuropeanTournaments];
 
-//         // get List of Uefa "li" Elements from Nodelist
-//         let liEuropeanTournaments = document.querySelectorAll(".World")
-//         let liEuropeanTournamentsArray = [...liEuropeanTournaments]
-
-//         // Map Through over the Uefa "li" Elements
-//         // and add logos from "Responsed Data"
-//         liEuropeanTournamentsArray.map((europeanTournament)=>{
-//           if(europeanTournament.attributes.name.nodeValue == leagueObj){
-//             // console.log("hello2")
-//                   let logoForEuropeanTournament = document.createElement("div")
-//                   logoForEuropeanTournament.style.backgroundImage = `url("${leagueLogo}")`
-//                   logoForEuropeanTournament.classList.add("europeanTournamentLogo")
-//                   // console.log(europeanTournament, "europeanTournament")
-//                   europeanTournament.prepend(logoForEuropeanTournament)
-//           }
-//         })
-//     }).catch(function (error) {
-//       console.error(error);
-//       if(error.response.status == 429){
-//         let tooManyRequests = document.getElementById("too-many-requests");
-//         tooManyRequests.classList.add("exaggerated")
-//       }
-//     });
-
-// })
+      // Map Through over the Uefa "li" Elements
+      // and add logos from "Responsed Data"
+      liEuropeanTournamentsArray.map((europeanTournament) => {
+        if (europeanTournament.attributes.name.nodeValue == leagueObj) {
+          // console.log("hello2")
+          let logoForEuropeanTournament = document.createElement("div");
+          logoForEuropeanTournament.style.backgroundImage = `url("${leagueLogo}")`;
+          logoForEuropeanTournament.classList.add("europeanTournamentLogo");
+          // console.log(europeanTournament, "europeanTournament")
+          europeanTournament.prepend(logoForEuropeanTournament);
+        }
+      });
+    })
+    .catch(function (error) {
+      console.error(error);
+      if (error.response.status == 429) {
+        let tooManyRequests = document.getElementById("too-many-requests");
+        tooManyRequests.classList.add("exaggerated");
+      }
+    });
+});
 
 // (in WIndow Load function)
 // call arrow function to iterate over Navleagues
@@ -422,7 +426,7 @@ navLeagues.map((navLeague) =>
     axios
       .request(sendRequestObj_optionsToday)
       .then(function (response) {
-        console.log(response.data.response, "Today");
+        // console.log(response.data.response, "Today");
         // console.log(response.data.response.filter((eachCountryLeague) => {
         //     return eachCountryLeague.league.id == navLeague.id
         // }));
@@ -501,7 +505,7 @@ navLeagues.map((navLeague) =>
               NoMatches.innerText = "There is no matches today";
               leagueNameAndMatchesWrapper.appendChild(NoMatches);
 
-              console.log("There is no match today");
+              // console.log("There is no match today");
             }
 
             matchList.appendChild(leagueNameAndMatchesWrapper);
@@ -565,10 +569,10 @@ navLeagues.map((navLeague) =>
         );
 
         function eachMatchesFixturesAndScores() {
-          console.log(
-            todayAndYesterday_EachLeagueMatches,
-            "todayAndYesterday_EachLeagueMatches"
-          );
+          // console.log(
+          //   todayAndYesterday_EachLeagueMatches,
+          //   "todayAndYesterday_EachLeagueMatches"
+          // );
 
           // here Experimental "todayAndYesterday_EachLeagueMatches" instead of "eachLeagueMatches"
           todayAndYesterday_EachLeagueMatches.filter((match) => {
@@ -772,12 +776,12 @@ navLeagues.map((navLeague) =>
     axios
       .request(sendRequestObj_optionsPreviousDay)
       .then(function (response) {
-        console.log(
-          response.data.response,
-          "Previous Day",
-          sendRequestObj_optionsPreviousDay,
-          "sendRequestObj_optionsPreviousDay"
-        );
+        // console.log(
+        //   response.data.response,
+        //   "Previous Day",
+        //   sendRequestObj_optionsPreviousDay,
+        //   "sendRequestObj_optionsPreviousDay"
+        // );
         // createLeaguesAndMatches(allChampionshipsObject_Yesterday)
         const allChampionshipsObject_Yesterday = response.data.response;
 
@@ -825,7 +829,7 @@ navLeagues.map((navLeague) =>
             };
           }
         );
-        console.log(eachLeagueMatchesYesterday, "eachLeagueMatchesYesterday");
+        // console.log(eachLeagueMatchesYesterday, "eachLeagueMatchesYesterday");
 
         // Filter only Those yesterday Matches which is Active from Current League
         // (to show after new day starts at 12AM)
@@ -859,17 +863,16 @@ navLeagues.map((navLeague) =>
   })
 );
 
-// if(currentLeague.length == 0 && currentDateTime){
-//   console.log("There is no mathces today", Date.parse(currentDateTime), (Date.parse(currentDateTime)-(1000 * 60 * 60 * 24)));
-//   console.log(currentLeague.length)
-
-//   let curntDate = Date.parse(currentDateTime)
-//   let minus1Day = 1000 * 60 * 60 * 24
-// checking the lastcurrentDateTime Matches
-// for(i = curntDate; currentLeague.length < 1; curntDate-minus1Day){
-//   console.log("Hello", curntDate-(1000 * 60 * 60 * 24))
-// }
-// }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // 1) converting date
 
